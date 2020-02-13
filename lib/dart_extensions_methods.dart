@@ -1,4 +1,4 @@
-library dart_extensions;
+library dart_extensions_methods;
 
 import 'dart:collection';
 import 'dart:core';
