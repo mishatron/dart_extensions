@@ -33,21 +33,21 @@ Pair<int, String> pair = Pair();
 
 ### Bool extension
 
-`not` - Returns the inverse of this boolean.<br/>
-`and` - Logical and.<br/>
-`or` - Logical or.<br/>
-`xor` - Logical xor.<br/>
+`not` - Returns the inverse of this boolean.  
+`and` - Logical and.  
+`or` - Logical or.  
+`xor` - Logical xor.
 
 ### Iterable extensions
 
-`isNullOrEmpty` - Returns `true` if this nullable iterable is either `null` or empty.<br/>
-`isNotNullOrEmpty` - Returns `false` if this nullable iterable is either `null` or empty.<br/>
-`any` - Returns `true` if at least one element matches the given predicate.<br/>
-`toSet` - Convert iterable to set.<br/>
-`intersect` - Returns a set containing all elements that are contained by both this set and the specified collection.<br/>
-`subtract` - Returns a set containing all elements that are contained  by this collection and not contained by the specified collection.<br/>
-`union` - Returns a set containing all distinct elements from both collections.<br/>
+`isNullOrEmpty` - Returns `true` if this nullable iterable is either `null` or empty.  
+`isNotNullOrEmpty` - Returns `false` if this nullable iterable is either `null` or empty.  
+`any` - Returns `true` if at least one element matches the given predicate.  
+`toSet` - Convert iterable to set.  
+`intersect` - Returns a set containing all elements that are contained by both this set and the specified collection.  
+`subtract` - Returns a set containing all elements that are contained  by this collection and not contained by the specified collection.  
+`union` - Returns a set containing all distinct elements from both collections.
 
 ### List extensions
 
-`distinctBy` - Returns a list containing only elements from the given collection having distinct keys returned by the given selector function.<br/>
+`distinctBy` - Returns a list containing only elements from the given collection having distinct keys returned by the given selector function.

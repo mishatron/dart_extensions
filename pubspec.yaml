@@ -1,6 +1,6 @@
 name: dart_extensions_methods
 description: "Extensions for different types similar to kotlin. Methods for the next set of types: String, bool, Iterable, List. Also contains some global extensions and class Pair"
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/mishatron/dart_extensions.git
 
 environment:
