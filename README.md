@@ -27,15 +27,26 @@ Pair<int, String> pair = Pair();
 `toDouble` - Returns the value of this number as an double.
 `toDoubleOrNull` - Returns the value of this number as an double or null if can not be parsed.
 `toBoolean` - Returns true if 'this' is "true", otherwise - false.
+`replaceAfter` - Replaces part of string after the first occurrence of given delimiter with the replacement string.
+`replaceBefore` - Replaces part of string before the first occurrence of given delimiter with the replacement string.
+`anyChar` - Returns `true` if at least one element matches the given predicate.
 
 ### Bool extension
 
 `not` - Returns the inverse of this boolean.
+`and` - Logical and.
+`or` - Logical or.
+`xor` - Logical xor.
 
 ### Iterable extensions
 
 `isNullOrEmpty` - Returns `true` if this nullable iterable is either `null` or empty.
 `isNotNullOrEmpty` - Returns `false` if this nullable iterable is either `null` or empty.
+`any` - Returns `true` if at least one element matches the given predicate.
+`toSet` - Convert iterable to set.
+`intersect` - Returns a set containing all elements that are contained by both this set and the specified collection.
+`subtract` - Returns a set containing all elements that are contained  by this collection and not contained by the specified collection.
+`union` - Returns a set containing all distinct elements from both collections.
 
 ### List extensions
 
