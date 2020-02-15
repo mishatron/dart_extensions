@@ -6,6 +6,6 @@
 
 * Added some methods for String, Iterable, bool
 
-## [1.0.2] - 15.02.2020
+## [1.0.3] - 15.02.2020
 
 * Improved documentation
