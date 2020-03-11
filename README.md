@@ -29,7 +29,8 @@ Pair<int, String> pair = Pair();
 `toBoolean` - Returns true if 'this' is "true", otherwise - false.  
 `replaceAfter` - Replaces part of string after the first occurrence of given delimiter with the replacement string.  
 `replaceBefore` - Replaces part of string before the first occurrence of given delimiter with the replacement string.  
-`anyChar` - Returns `true` if at least one element matches the given predicate.
+`anyChar` - Returns `true` if at least one element matches the given predicate.  
+`containsIgnoreCase` - Returns `true` if string contains another without matching case.
 
 ### Bool extension
 
@@ -46,7 +47,8 @@ Pair<int, String> pair = Pair();
 `toSet` - Convert iterable to set.  
 `intersect` - Returns a set containing all elements that are contained by both this set and the specified collection.  
 `subtract` - Returns a set containing all elements that are contained  by this collection and not contained by the specified collection.  
-`union` - Returns a set containing all distinct elements from both collections.
+`union` - Returns a set containing all distinct elements from both collections.  
+`countWhere` - Returns count of elements that matches the given predicate.
 
 ### List extensions
 
