@@ -115,6 +115,10 @@ extension StringExtensions on String {
   bool equalsIgnoreCase(String other) =>
       (this == null && other == null) ||
       (this != null && other != null && toLowerCase() == other.toLowerCase());
+
+  /// Returns `true` if string contains another without matching case
+  bool containsIgnoreCase(String other) =>
+      this.toLowerCase().contains(other.toLowerCase());
 }
 
 extension BooleanExtensions on bool {
@@ -157,6 +161,11 @@ extension IterableExtensions<T> on Iterable<T> {
     if (this.isNullOrEmpty()) return false;
     for (final element in this) if (predicate(element)) return true;
     return false;
+  }
+
+  /// Returns count of elements that matches the given [predicate].
+  int countWhere(bool predicate(T element)) {
+    return this.where(predicate).length;
   }
 
   /// Convert iterable to set

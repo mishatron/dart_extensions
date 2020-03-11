@@ -9,3 +9,7 @@
 ## [1.0.3] - 15.02.2020
 
 * Improved documentation
+
+## [1.0.4] - 11.03.2020
+
+* Added countWhere for Iterable and containsIgnoreCase for String
