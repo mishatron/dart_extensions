@@ -1,4 +1,4 @@
-## [1.1.0] - 06.01.2021
+## [1.1.1] - 06.01.2021
 * Removed flutter as dependency
 * Added next methods: forEachIndexed, groupBy, filter, filterNot, filterNotNull, take
 
