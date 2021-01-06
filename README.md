@@ -48,8 +48,12 @@ Pair<int, String> pair = Pair();
 `intersect` - Returns a set containing all elements that are contained by both this set and the specified collection.  
 `subtract` - Returns a set containing all elements that are contained  by this collection and not contained by the specified collection.  
 `union` - Returns a set containing all distinct elements from both collections.  
-`countWhere` - Returns count of elements that matches the given predicate.
+`countWhere` - Returns count of elements that matches the given predicate.  
+`distinctBy` - Returns a list containing only elements from the given collection having distinct keys returned by the given selector function.  
+`forEachIndexed` - Performs the given action on each element on iterable, providing sequential index with the element.  
+`groupBy` - Groups elements of the original collection by the key returned by the given function  applied to each element and returns a map where each group key is associated with a list of corresponding elements.  
+`filter` - Returns a list containing only elements matching the given predicate.  
+`filterNot` - Returns a list containing all elements not matching the given predicate.  
+`filterNotNull` - Returns a list containing all elements that are not null.  
+`take` - Returns a list containing first n elements.
 
-### List extensions
-
-`distinctBy` - Returns a list containing only elements from the given collection having distinct keys returned by the given selector function.

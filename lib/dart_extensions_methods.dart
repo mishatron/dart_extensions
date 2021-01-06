@@ -86,7 +86,9 @@ extension StringExtensions on String {
       [String defaultValue]) {
     final index = indexOf(delimiter);
     return (index == -1)
-        ? defaultValue.isNullOrEmpty() ? this : defaultValue
+        ? defaultValue.isNullOrEmpty()
+            ? this
+            : defaultValue
         : replaceRange(index + 1, length, replacement);
   }
 
@@ -96,7 +98,9 @@ extension StringExtensions on String {
       [String defaultValue]) {
     final index = indexOf(delimiter);
     return (index == -1)
-        ? defaultValue.isNullOrEmpty() ? this : defaultValue
+        ? defaultValue.isNullOrEmpty()
+            ? this
+            : defaultValue
         : replaceRange(0, index, replacement);
   }
 
@@ -193,9 +197,92 @@ extension IterableExtensions<T> on Iterable<T> {
     set.addAll(other);
     return set;
   }
-}
 
-extension ListExtensions<T> on List<T> {
+  /// Performs the given action on each element on iterable, providing sequential index with the element.
+  /// [element] the element on the current iteration
+  /// [index] the index of the current iteration
+  ///
+  /// example:
+  /// ["ss","tt","xx"].forEachIndexed((it, index) {
+  ///    print("it, $index");
+  ///  });
+  /// result:
+  /// ss, 0
+  /// tt, 1
+  /// xx, 2
+  void forEachIndexed(void action(T element, int index)) {
+    var index = 0;
+    for (var element in this) {
+      action(element, index++);
+    }
+  }
+
+  /// Groups elements of the original collection by the key returned by the given [keySelector] function
+  /// applied to each element and returns a map where each group key is associated with a list of corresponding elements.
+  ///
+  /// The returned map preserves the entry iteration order of the keys produced from the original collection.
+  Map<K, List<T>> groupBy<T, K>(K keySelector(T e)) {
+    var map = <K, List<T>>{};
+
+    for (final element in this) {
+      var list = map.putIfAbsent(keySelector(element as T), () => []);
+      list.add(element as T);
+    }
+    return map;
+  }
+
+  /// Returns a list containing only elements matching the given [predicate]
+  List<T> filter(bool test(T element)) {
+    final result = <T>[];
+    forEach((e) {
+      if (test(e)) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
+  /// Returns a list containing all elements not matching the given [predicate]
+  List<T> filterNot(bool test(T element)) {
+    final result = <T>[];
+    forEach((e) {
+      if (!test(e)) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
+  /// Returns a list containing all elements that are not null
+  List<T> filterNotNull() {
+    final result = <T>[];
+    forEach((e) {
+      if (e != null) {
+        result.add(e);
+      }
+    });
+    return result;
+  }
+
+  /// Returns a list containing first [n] elements.
+  List<T> take(int n) {
+    if (n <= 0) return [];
+
+    var list = List<T>();
+    if (this is Iterable) {
+      if (n >= this.length) return this.toList();
+
+      var count = 0;
+      var thisList = this.toList();
+      for (var item in thisList) {
+        list.add(item);
+        if (++count == n)
+          break;
+      }
+    }
+    return list;
+  }
+
   /// Returns a list containing only elements from the given collection
   // having distinct keys returned by the given [selector] function.
   //
