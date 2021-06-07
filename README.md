@@ -55,5 +55,7 @@ Pair<int, String> pair = Pair();
 `filter` - Returns a list containing only elements matching the given predicate.  
 `filterNot` - Returns a list containing all elements not matching the given predicate.  
 `filterNotNull` - Returns a list containing all elements that are not null.  
-`take` - Returns a list containing first n elements.
+`take` - Returns a list containing first n elements.  
+`firstOrNull` - Returns first element or null otherwise.  
+`firstWhereOrNull` - Returns first element by given predicate or null otherwise.
 

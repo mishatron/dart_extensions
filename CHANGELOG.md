@@ -1,4 +1,8 @@
-## [1.1.1] - 06.01.2021
+## [2.0.0] - 07.06.2021
+* Migrated to null safety
+* Added next methods: firstOrNull, firstWhereOrNull
+
+* ## [1.1.1] - 06.01.2021
 * Removed flutter as dependency
 * Added next methods: forEachIndexed, groupBy, filter, filterNot, filterNotNull, take
 
